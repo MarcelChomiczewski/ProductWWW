@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+section {
+  overflow-x: hidden;
+  
+}
+
+:root {
+  --Sniglet-font: "Sniglet", cursive;
+  --Rubik: "Rubik", cursive;
+  --Patua: "Patua One", cursive;
+  --Lobster: "lobster", cursive;
+  --light-black: #2e2c2caf;
+  --bggradient: radial-gradient(circle at 70% 50%,#43cdfe 0%,#2595ea 35%);
+  --light-gray: rgba(255, 255, 255, 0.877);
+}
+
+header a {
+  font-family: var(--Sniglet-font);
+  font-size: 0.9em;
+  color: whitesmoke;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--bggradient);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item:last-child {
+  padding-right: 10.5em;
+}
+
+header .nav-item {
+  padding: 0.9em;
+}
+
+header .navbar-brand {
+  padding-left: 8rem;
+}
+
+header .nav-link:hover {
+  color: whitesmoke;
+}
+
+header .row .col-md-7 {
+  padding: 22vmin 1vmin;
+  padding-bottom: 20vmin;
+}
+
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-5 img {
+  width: 120%;
+  margin-top: 120px;
+}
+
+header {
+  background: var(--bggradient);
+  animation: gradient 22s linear 5;
+  background-size: 180%;
+  background-position: 0% 0%;
+}
+
+header .container .col-md-7 {
+  font-family: "Rubik", sans-serif;
+  border-radius: 100% 50%;
+}
+
+header .container .col-md-7 h6 {
+  padding: 1vmin;
+  letter-spacing: 4px;
+}
+
+header .container .col-md-7 h1 {
+  font-size: 8.5vmin;
+  font-weight: bold;
+  padding: 0.1em 0em;
+}
+
+header .container .col-md-7 p {
+  padding: 1vmin 5vmin;
+}
+
+.primary-btn {
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/********** section 1 **************/
+
+.section-1 {
+  padding: 20vmin 0vmin;
+  width: 100%;
+  height: 100%;
+  /* background: #262626; */
+  background: url(../assets/muscles-dark.jpg);
+  background-position: -14rem -5rem;
+  background-size: 140%;
+}
+
+.landing {
+  position: relative;
+  z-index: 2;
+  width: 710px;
+  height: 520px;
+  margin: 25px auto;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+
+.landing .base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 38px;
+}
+
+.landing .image {
+  display: none;
+}
+
+/*--------------------
+Copy
+--------------------*/
+
+.copy {
+  position: relative;
+  z-index: 2;
+}
+
+.copy .title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 30px;
+  margin-left: -3px;
+  background-image: var(--bggradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copy .title small {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 50px;
+  line-height: 1;
+  display: block;
+  text-indent: 3px;
+}
+
+.copy .text {
+  color: #282652;
+  width: 400px;
+  font-size: 90%;
+  font-family: var(--Sniglet-font);
+}
+
+.copy .cta {
+  cursor: pointer;
+  margin-top: 40px;
+  font-family: var(--Sniglet-font);
+  background: var(--bggradient);
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 600;
+}
+
+/*--------------------
+Overlay
+--------------------*/
+
+.base.overlay {
+  z-index: 2;
+  -webkit-clip-path: polygon(375px 0, 710px 0, 710px 530px, 469px 530px);
+          clip-path: polygon(375px 0, 710px 0, 710px 530px, 469px 530px);
+  color: var(--bggradient);
+  background: var(--bggradient);
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.base.overlay.over {
+  -webkit-clip-path: polygon(-1750px 0, 710px 0, 710px 630px, 0 710px);
+          clip-path: polygon(-1750px 0, 710px 0, 710px 630px, 0 710px);
+}
+
+.base.overlay .image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.base.overlay .image::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: var(--bggradient);
+  opacity: 0.8;
+}
+
+.base.overlay .title {
+  background-image: linear-gradient(0, #fff, #fff);
+}
+
+.base.overlay .text {
+  color: #fff;
+}
+
+.base.overlay .cta {
+  background: #fff;
+  font-family: var(--Sniglet-font);
+  color: var(--bggradient);
+}
+
+
+/*  Section 2  */
+
+.cover {
+    width: 100%;
+    height: 25vmin;
+    background-position: -14rem -5rem; 
+    background: var(--bggradient);
+    background-size: 180%;
+}
+
+.cover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.cover .content {
+  width: 100%;
+  height: 100%;
+  padding-top: 20vmin;
+}
+
+.numbers .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 50px 0px rgba(0, 123, 255, 0.47);
+}
+
+.numbers {
+  margin-top: -15vmin;
+}
+
+.numbers .rect h1 {
+  font-size: 5rem;
+  color: #343a40;
+}
+
+.numbers .rect > p {
+  font-family: var(--Patua);
+}
+
+.purchase > h1 {
+  padding-top: 15vmin;
+  padding-bottom: 0.1em;
+  font-family: var(--Lobster);
+}
+
+.purchase > p {
+  color: var(--light-black);
+  font-size: 3vmin;
+  padding-bottom: 10vmin;
+}
+
+.purchase .cards .card {
+  width: 22rem;
+  margin: 3vmin 3vmin;
+}
+
+.cards div {
+  padding: 0;
+  margin: 0;
+}
+
+.cards .title {
+  background: rgba(208, 241, 241, 0.199);
+  padding: 1.4em 2.5em;
+  font-size: 2vmin;
+}
+
+.card .card-text {
+  padding: 2.5rem 3rem;
+  color: var(--light-black);
+}
+
+.card-body .pricing {
+  background: rgba(208, 241, 241, 0.199);
+  border-top-right-radius: 170px;
+  border-top-left-radius: 170px;
+}
+
+.card-body .pricing > h1 {
+  font-size: 10vmin;
+  padding: 1em 0.5em;
+}
+
+/* Section 3 */
+
+.section-3 {
+  height: 70vmin;
+  margin-top: 15vmin;
+  background: var(--bggradient);
+}
+
+.section-3 .col-md-12 > h1 {
+  padding: 2em 0 0.5em 0;
+  color: whitesmoke;
+  font-size: 6vmin;
+}
+
+.section-3 .col-md-12 > p {
+  padding: 0 4em;
+  padding-bottom: 2em;
+  color: var(--light-gray);
+  font-size: 3vmin;
+}
+
+.section-3 .desktop {
+  background: white;
+  display: inline-block;
+  border-radius: 3em;
+  padding: 2vmin 4.5vmin;
+  margin: 1em;
+}
+
+.section-3 .desktop h3 {
+  font-size: 4vmin;
+}
+
+.section-3 .desktop p {
+  font-size: 2vmin;
+}
+
+/* Section Team */
+
+.section-4 .container h1 {
+  font-size: 6vmin;
+  padding-top: 14vmin;
+}
+
+.section-4 .team {
+  padding: 10vmin 4vmin;
+}
+
+.section-4 .card {
+  width: 22em;
+  margin-top: 10vmin;
+}
+
+.section-4 .card .card-text {
+  padding: 0.5em;
+}
+
+.section-4 .card-body > a {
+  font-size: 1.5em;
+}
+
+.section-4 .carousel-item {
+  padding-left: 3rem;
+}
+
+.border-radius {
+  border-radius: 340px;
+  width: 60%;
+}
+
+footer {
+  background: linear-gradient(315deg, #000000 0%, #414141 74%);
+  overflow-x: hidden;
+  padding: 14vmin 18vmin;
+}
+
+footer p > span {
+  color: #ff512f;
+}
+
+footer input {
+  border: none !important;
+}
+
+footer input::placeholder {
+  color: white !important;
+}
+
+footer .input-group .input-group-text {
+  background-color: var(--bggradient);
+  border: none;
+}
+
+footer .column i {
+  color: #007bff;
+}
+
+/* It is Adjacent sibling combinator */
+
+footer .column i + i {
+  padding: 0 0.5em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(315deg, #000000 0%, #414141 74%);
+  z-index: 9999;
+  transition: all 1.5s ease;
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 30% 10%
+	}
+  10% {
+		background-position: 60% 10%
+	}
+  20% {
+		background-position: 90% 10%
+	}
+  30% {
+		background-position: 130% 20%
+	}
+  40% {
+		background-position: 140% 40%
+	}
+  50% {
+		background-position: 160% 70%
+	}
+  
+	60% {
+		background-position: 140% 80%
+	}
+  70% {
+		background-position: 110% 90%
+	}
+  80% {
+		background-position: 90% 65%
+	}
+  90% {
+		background-position: 70% 45%
+	}
+	100% {
+		background-position: 40% 25%
+	}
+}
